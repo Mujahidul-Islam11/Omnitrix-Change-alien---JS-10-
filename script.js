@@ -12,10 +12,11 @@ const aliens = [
 let currentIndex = -1; 
 
 watch.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % (aliens.length + 1);
+  currentIndex = currentIndex + 1;
   if (currentIndex === aliens.length) {
     watch.src = "./assets/watch.png";
     watch.alt = "watch";
+    currentIndex = -1;
   } else {
     watch.src = aliens[currentIndex].src;
     watch.alt = aliens[currentIndex].alt;
